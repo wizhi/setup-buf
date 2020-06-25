@@ -1,0 +1,10 @@
+name: 'Install buf'
+description: 'Installs the protobuf build tool buf'
+inputs:
+  version:
+    description: ''
+    required: true
+    default: '0.18.0'
+runs:
+  using: 'node12'
+  main: 'index.js'
