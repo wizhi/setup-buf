@@ -1,10 +1,17 @@
-name: 'Install buf'
-description: 'Installs the protobuf build tool buf'
+name: 'Setup buf'
+description: >
+  Install buf for your GitHub Action workflows.
+
 inputs:
   version:
-    description: ''
+    description: 'The version of buf to install.'
     required: true
     default: '0.18.0'
+
 runs:
   using: 'node12'
   main: 'index.js'
+
+branding:
+  icon: 'square'
+  color: 'blue'
