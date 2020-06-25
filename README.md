@@ -15,7 +15,7 @@ As of `2020-06-25`, only builds for Linux and Darwin are available. For this rea
 
 Using the action is very simple.
 
-```
+```yaml
 name: Check protobuf files
 
 on: push
