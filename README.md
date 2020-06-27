@@ -16,16 +16,16 @@ As of `2020-06-25`, only builds for Linux and Darwin are available. For this rea
 Using the action is very simple.
 
 ```yaml
-name: Check protobuf files
+name: Quality control pull requests
 
-on: push
+on: pull_request
 
 jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: wizhi/actions-buf
+      - uses: wizhi/actions-buf@v1
         with:
           version: 0.18.0
       - run: buf check lint
@@ -37,7 +37,7 @@ jobs:
       - uses: wizhi/actions-buf@v1
         with:
           version: 0.18.0
-      - run: buf check breaking --against-input ".git#ref=${{ github.ref }}^"
+      - run: buf check breaking --against-input ".git#ref=${{ github.base_ref }}"
 
 ```
 
