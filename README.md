@@ -25,7 +25,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: wizhi/actions-buf@v1
+      - uses: wizhi/setup-buf@v1
         with:
           version: 0.18.0
       - run: buf check lint
@@ -34,7 +34,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: wizhi/actions-buf@v1
+      - uses: wizhi/setup-buf@v1
         with:
           version: 0.18.0
       - run: buf check breaking --against-input ".git#ref=${{ github.base_ref }}"
