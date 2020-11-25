@@ -1,7 +1,6 @@
 const path = require("path");
 const fs = require("fs");
 const core = require("@actions/core");
-const github = require("@actions/github");
 const tc = require("@actions/tool-cache");
 
 const cachedFileName = "buf";
