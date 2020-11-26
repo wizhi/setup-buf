@@ -13,10 +13,17 @@ const executableFileName = "buf";
 			"linux": "Linux",
 			"darwin": "Darwin",
 		})[process.platform];
-		const arch = "x86_64";
+		const arch = ({
+			"x64": "x86_64",
+		})[process.arch];
 	
 		if (!platform) {
 			core.setFailed(`Unsupported platform '${process.platform}'`)
+			return;
+		}
+
+		if (!arch) {
+			core.setFailed(`Unsupported architecture '${process.arch}'`)
 			return;
 		}
 	
