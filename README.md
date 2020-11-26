@@ -27,7 +27,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: wizhi/setup-buf@v1
         with:
-          version: 0.18.0
+          version: 0.32.0
       - run: buf check lint
 
   breaking:
@@ -36,7 +36,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: wizhi/setup-buf@v1
         with:
-          version: 0.18.0
+          version: 0.32.0
       - run: buf check breaking --against-input ".git#ref=${{ github.base_ref }}"
 
 ```
