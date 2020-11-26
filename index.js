@@ -4,12 +4,16 @@ const core = require("@actions/core");
 const github = require("@actions/github");
 const tc = require("@actions/tool-cache");
 
+const defaults = {
+	version: "0.32.0"
+};
+
 const cachedFileName = "buf";
 const executableFileName = "buf";
 
 (async () => {
 	try {
-		const version = core.getInput("version");
+		const version = core.getInput("version") || defaults.version;
 		const platform = ({
 			"linux": "Linux",
 			"darwin": "Darwin",
