@@ -2,16 +2,17 @@
   "name": "setup-buf",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "ncc build src -o dist"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@actions/core": "^1.2.6",
-    "@actions/github": "^3.0.0",
-    "@actions/tool-cache": "^1.5.5"
+    "@actions/tool-cache": "^1.5.5",
+    "@zeit/ncc": "^0.22.3"
   }
 }
