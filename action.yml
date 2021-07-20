@@ -6,7 +6,7 @@ inputs:
   version:
     description: 'The version of buf to install.'
     required: true
-    default: '0.18.0'
+    default: '0.44.0'
 
 runs:
   using: 'node12'
